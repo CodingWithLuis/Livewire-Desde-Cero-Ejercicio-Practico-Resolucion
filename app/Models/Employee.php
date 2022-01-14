@@ -21,6 +21,6 @@ class Employee extends Model
 
     public function employee_status()
     {
-        return $this->belongsTo(EmployeeStatus::class);
+        return $this->belongsTo(EmployeeStatus::class)->withDefault();
     }
 }

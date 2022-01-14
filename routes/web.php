@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/employees/index', \App\Http\Livewire\Employees\Index::class)->name('employees.index');
+Route::get('/employees/create', \App\Http\Livewire\Employees\Create::class)->name('employees.create');
+Route::get('/employees/{employee}/edit', \App\Http\Livewire\Employees\Edit::class)->name('employees.edit');
